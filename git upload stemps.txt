@@ -1,0 +1,8 @@
+1.open terminal 
+2.navigate to the project folder in terminal
+3. type git init  and press enter
+4. git remote add origin [copied web address]
+
+Example: git remote add origin https://github.com/mindplace/test-repo.git
+
+
