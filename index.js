@@ -12,11 +12,11 @@ app.use(morgan('dev')); // log requests to the console
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port     = process.env.PORT || 8080; // set our port
+var port   =  8080
 
 // DATABASE SETUP
 var mongoose   = require('mongoose');
-mongoose.connect('mongodb://node:node@novus.modulusmongo.net:27017/humonics_db'); // connect to our database
+mongoose.connect('mongodb://localhost/humonics_db'); // connect to our database
 
 // Handle the connection event
 var db = mongoose.connection;
