@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/humo_db");
+mongoose.createConnection('localhost','humo_db')
 var nameSchema = new mongoose.Schema({
     firstName: String,
     lastName: String
