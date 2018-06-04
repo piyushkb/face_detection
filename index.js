@@ -7,9 +7,11 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.createConnection('localhost','humo_db')
+mongoose.connect('mongodb://localhost/humonics_db');
+
 var nameSchema = new mongoose.Schema({
     firstName: String,
     lastName: String
