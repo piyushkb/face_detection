@@ -12,6 +12,15 @@ var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/humonics_db');
 
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function callback () {
+  console.log("open");
+});
+
+ 
+
+
 var nameSchema = new mongoose.Schema({
     firstName: String,
     lastName: String
