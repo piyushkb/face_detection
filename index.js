@@ -1,10 +1,6 @@
-var express = require('express'),
-   // fs = require('fs'),
-    app = express();
-//    eps = require('ejs'),
-//    morgan = require('morgan');
-
-var app = express();
+var express = require('express'), db = require('./Utils/db'),
+app = express();
+ 
 
 var ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
